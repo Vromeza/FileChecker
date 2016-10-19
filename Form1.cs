@@ -80,15 +80,14 @@ namespace FileChecker {
             switch (checkType) {
                 case "Line":
                     //@TODO: Implement line checking
-                    break;
+                    return false;
                 case "Sort":
                     listToDictionary(ref Dictionary01, ref lines01);
                     listToDictionary(ref Dictionary02, ref lines02);
                     return DictionaryExtensionMethods.ContentEquals(Dictionary01, Dictionary02);
                 default:MessageBox.Show("Please select a check type");
-                    break;
+                    return false;
             }
-            return true;
         }
 
         private void listToDictionary(ref Dictionary<string, int> dictionary, ref List<string> list) {
