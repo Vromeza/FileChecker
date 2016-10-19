@@ -14,7 +14,8 @@ namespace FileChecker {
 
         StreamReader streamReader01, streamReader02;
         int lineCount01, lineCount02;
-        Dictionary<int, string> Dictionary01, Dictionary02;
+        Dictionary<string, int> Dictionary01 = new Dictionary<string, int>();
+        Dictionary<string, int> Dictionary02 = new Dictionary<string, int>();
         List<string> lines01 = new List<string>();
         List<string> lines02 = new List<string>();
         char Delimiter;
@@ -23,19 +24,13 @@ namespace FileChecker {
             InitializeComponent();
         }
 
-        private void sortOpenFile_Btn_Click(object sender, EventArgs e) {
+        private void openFile_Btn_Click(object sender, EventArgs e) {
             if (openFileDialog01.ShowDialog() == DialogResult.OK) {
-                string line;
                 streamReader01 = new StreamReader(openFileDialog01.FileName);
                 sortSelectedFile_lbl01.Text = openFileDialog01.FileName;
-                //lineCount01 = File.ReadAllLines(openFileDialog01.FileName).Length;
 
-                /* More efficient line reading for large files */
-                while ((line = streamReader01.ReadLine()) != null) {
-                    lines01.Add(line);
-                    lineCount01++;
-                }
-                /**/
+                fileToList(ref streamReader01, ref lines01, ref lineCount01);
+                
                 linesCountValue_lbl01.Text = lineCount01.ToString();
 
                 //@TODO: Move this to perform check
@@ -45,19 +40,13 @@ namespace FileChecker {
             }
         }
 
-        private void sortOpenFile_Btn02_Click(object sender, EventArgs e) {
+        private void openFile_Btn02_Click(object sender, EventArgs e) {
             if (openFileDialog02.ShowDialog() == DialogResult.OK) {
-                string line;
                 streamReader02 = new StreamReader(openFileDialog02.FileName);
                 sortSelectedFile_lbl02.Text = openFileDialog02.FileName;
-                //lineCount02 = File.ReadAllLines(openFileDialog02.FileName).Length;
 
-                /* More efficient line reading for large files */
-                while ((line = streamReader02.ReadLine()) != null) {
-                    lineCount02++;
-                    lines02.Add(line);
-                }
-                /**/
+                fileToList(ref streamReader02, ref lines02, ref lineCount02);
+
                 linesCountValue_lbl02.Text = lineCount02.ToString();
                 if (lineCount02 == 0) {
                     statusValue_Lbl02.Text = "File is empty";
@@ -75,7 +64,13 @@ namespace FileChecker {
                 MessageBox.Show("Please select file.");
                 return;
             }
-            performCheck();
+            if (performCheck()) {
+                MessageBox.Show("Files are equal");
+                //@TODO: Display relevant data
+            }else {
+                MessageBox.Show("Files are not equal");
+                //@TODO: Display relevant data
+            }
         }
 
 
@@ -83,34 +78,46 @@ namespace FileChecker {
             Delimiter = delimiter_txtbox.Text[0];
             checkType = typeGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             switch (checkType) {
-                case "Sort":
-
-                    break;
                 case "Line":
-
+                    //@TODO: Implement line checking
                     break;
+                case "Sort":
+                    listToDictionary(ref Dictionary01, ref lines01);
+                    listToDictionary(ref Dictionary02, ref lines02);
+                    return DictionaryExtensionMethods.ContentEquals(Dictionary01, Dictionary02);
                 default:MessageBox.Show("Please select a check type");
                     break;
             }
-
-            /* File 01*/
-            foreach (string line in lines01) {
-                Console.WriteLine(line);
-                Console.WriteLine("Number of columns {0}", getNumberOfColumns(line, ','));
-            }
-
-            /* File 02*/
-            foreach (string line in lines02) {
-                Console.WriteLine(line);
-            }
-
             return true;
         }
 
-        private int getNumberOfColumns(string line, char delimiter) {
-            string[] columns = line.Split(delimiter);
-            return columns.Length;
+        private void listToDictionary(ref Dictionary<string, int> dictionary, ref List<string> list) {
+            dictionary.Clear();
+            foreach (string line in list) {
+                if (dictionary.ContainsKey(line)) {
+                    dictionary[line] += 1;
+                }
+                else {
+                    dictionary[line] = 1;
+                }
+            }
         }
 
+        private void fileToList(ref StreamReader file, ref List<string> list, ref int count) {
+            count = 0;
+            list.Clear();
+            /* More efficient line reading for large files */
+            string line;
+            while ((line = file.ReadLine()) != null) {
+                list.Add(line);
+                count++;
+            }
+            /**/
+            file.Close();
+        }
+
+        private int getNumberOfColumns(string line, char delimiter) {
+            return line.Split(delimiter).Length;
+        }
     }
 }

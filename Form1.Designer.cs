@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.sortSelectedFile_lbl01 = new System.Windows.Forms.Label();
-            this.sortOpenFile_Btn01 = new System.Windows.Forms.Button();
+            this.openFile_Btn01 = new System.Windows.Forms.Button();
             this.openFileDialog01 = new System.Windows.Forms.OpenFileDialog();
             this.sortRadioButton = new System.Windows.Forms.RadioButton();
             this.typeGroupBox = new System.Windows.Forms.GroupBox();
@@ -32,26 +32,26 @@
             this.lineRadioButton = new System.Windows.Forms.RadioButton();
             this.performCheck_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.sortOpenFile_Btn02 = new System.Windows.Forms.Button();
+            this.openFile_Btn02 = new System.Windows.Forms.Button();
             this.sortSelectedFile_lbl02 = new System.Windows.Forms.Label();
             this.openFileDialog02 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.statusValue_Lbl02 = new System.Windows.Forms.Label();
+            this.status_Lbl02 = new System.Windows.Forms.Label();
+            this.linesCountValue_lbl02 = new System.Windows.Forms.Label();
+            this.linesCount_lbl02 = new System.Windows.Forms.Label();
             this.columnCountValue_lbl02 = new System.Windows.Forms.Label();
             this.columnCount_lbl02 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.statusValue_Lbl01 = new System.Windows.Forms.Label();
+            this.status_Lbl01 = new System.Windows.Forms.Label();
+            this.linesCountValue_lbl01 = new System.Windows.Forms.Label();
             this.linesCount_lbl01 = new System.Windows.Forms.Label();
             this.columnCountValue_lbl01 = new System.Windows.Forms.Label();
             this.columnCount_lbl01 = new System.Windows.Forms.Label();
             this.settingsGroupBox = new System.Windows.Forms.GroupBox();
             this.delimiter_txtbox = new System.Windows.Forms.TextBox();
             this.delimiter_lbl = new System.Windows.Forms.Label();
-            this.linesCount_lbl02 = new System.Windows.Forms.Label();
-            this.linesCountValue_lbl01 = new System.Windows.Forms.Label();
-            this.linesCountValue_lbl02 = new System.Windows.Forms.Label();
-            this.status_Lbl01 = new System.Windows.Forms.Label();
-            this.status_Lbl02 = new System.Windows.Forms.Label();
-            this.statusValue_Lbl01 = new System.Windows.Forms.Label();
-            this.statusValue_Lbl02 = new System.Windows.Forms.Label();
             this.typeGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,15 +67,15 @@
             this.sortSelectedFile_lbl01.TabIndex = 1;
             this.sortSelectedFile_lbl01.Text = "...";
             // 
-            // sortOpenFile_Btn01
+            // openFile_Btn01
             // 
-            this.sortOpenFile_Btn01.Location = new System.Drawing.Point(6, 19);
-            this.sortOpenFile_Btn01.Name = "sortOpenFile_Btn01";
-            this.sortOpenFile_Btn01.Size = new System.Drawing.Size(75, 23);
-            this.sortOpenFile_Btn01.TabIndex = 0;
-            this.sortOpenFile_Btn01.Text = "Open file";
-            this.sortOpenFile_Btn01.UseVisualStyleBackColor = true;
-            this.sortOpenFile_Btn01.Click += new System.EventHandler(this.sortOpenFile_Btn_Click);
+            this.openFile_Btn01.Location = new System.Drawing.Point(6, 19);
+            this.openFile_Btn01.Name = "openFile_Btn01";
+            this.openFile_Btn01.Size = new System.Drawing.Size(75, 23);
+            this.openFile_Btn01.TabIndex = 0;
+            this.openFile_Btn01.Text = "Open file";
+            this.openFile_Btn01.UseVisualStyleBackColor = true;
+            this.openFile_Btn01.Click += new System.EventHandler(this.openFile_Btn_Click);
             // 
             // openFileDialog01
             // 
@@ -147,15 +147,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "compare with...";
             // 
-            // sortOpenFile_Btn02
+            // openFile_Btn02
             // 
-            this.sortOpenFile_Btn02.Location = new System.Drawing.Point(15, 29);
-            this.sortOpenFile_Btn02.Name = "sortOpenFile_Btn02";
-            this.sortOpenFile_Btn02.Size = new System.Drawing.Size(75, 23);
-            this.sortOpenFile_Btn02.TabIndex = 6;
-            this.sortOpenFile_Btn02.Text = "Open file";
-            this.sortOpenFile_Btn02.UseVisualStyleBackColor = true;
-            this.sortOpenFile_Btn02.Click += new System.EventHandler(this.sortOpenFile_Btn02_Click);
+            this.openFile_Btn02.Location = new System.Drawing.Point(15, 29);
+            this.openFile_Btn02.Name = "openFile_Btn02";
+            this.openFile_Btn02.Size = new System.Drawing.Size(75, 23);
+            this.openFile_Btn02.TabIndex = 6;
+            this.openFile_Btn02.Text = "Open file";
+            this.openFile_Btn02.UseVisualStyleBackColor = true;
+            this.openFile_Btn02.Click += new System.EventHandler(this.openFile_Btn02_Click);
             // 
             // sortSelectedFile_lbl02
             // 
@@ -180,7 +180,7 @@
             this.groupBox2.Controls.Add(this.linesCount_lbl02);
             this.groupBox2.Controls.Add(this.columnCountValue_lbl02);
             this.groupBox2.Controls.Add(this.columnCount_lbl02);
-            this.groupBox2.Controls.Add(this.sortOpenFile_Btn02);
+            this.groupBox2.Controls.Add(this.openFile_Btn02);
             this.groupBox2.Controls.Add(this.sortSelectedFile_lbl02);
             this.groupBox2.Location = new System.Drawing.Point(15, 220);
             this.groupBox2.Name = "groupBox2";
@@ -188,6 +188,42 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File No. 2";
+            // 
+            // statusValue_Lbl02
+            // 
+            this.statusValue_Lbl02.AutoSize = true;
+            this.statusValue_Lbl02.Location = new System.Drawing.Point(65, 121);
+            this.statusValue_Lbl02.Name = "statusValue_Lbl02";
+            this.statusValue_Lbl02.Size = new System.Drawing.Size(10, 13);
+            this.statusValue_Lbl02.TabIndex = 12;
+            this.statusValue_Lbl02.Text = "-";
+            // 
+            // status_Lbl02
+            // 
+            this.status_Lbl02.AutoSize = true;
+            this.status_Lbl02.Location = new System.Drawing.Point(12, 121);
+            this.status_Lbl02.Name = "status_Lbl02";
+            this.status_Lbl02.Size = new System.Drawing.Size(40, 13);
+            this.status_Lbl02.TabIndex = 11;
+            this.status_Lbl02.Text = "Status:";
+            // 
+            // linesCountValue_lbl02
+            // 
+            this.linesCountValue_lbl02.AutoSize = true;
+            this.linesCountValue_lbl02.Location = new System.Drawing.Point(65, 98);
+            this.linesCountValue_lbl02.Name = "linesCountValue_lbl02";
+            this.linesCountValue_lbl02.Size = new System.Drawing.Size(10, 13);
+            this.linesCountValue_lbl02.TabIndex = 10;
+            this.linesCountValue_lbl02.Text = "-";
+            // 
+            // linesCount_lbl02
+            // 
+            this.linesCount_lbl02.AutoSize = true;
+            this.linesCount_lbl02.Location = new System.Drawing.Point(12, 98);
+            this.linesCount_lbl02.Name = "linesCount_lbl02";
+            this.linesCount_lbl02.Size = new System.Drawing.Size(35, 13);
+            this.linesCount_lbl02.TabIndex = 9;
+            this.linesCount_lbl02.Text = "Lines:";
             // 
             // columnCountValue_lbl02
             // 
@@ -215,7 +251,7 @@
             this.groupBox1.Controls.Add(this.linesCount_lbl01);
             this.groupBox1.Controls.Add(this.columnCountValue_lbl01);
             this.groupBox1.Controls.Add(this.columnCount_lbl01);
-            this.groupBox1.Controls.Add(this.sortOpenFile_Btn01);
+            this.groupBox1.Controls.Add(this.openFile_Btn01);
             this.groupBox1.Controls.Add(this.sortSelectedFile_lbl01);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
@@ -223,6 +259,33 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File No.1";
+            // 
+            // statusValue_Lbl01
+            // 
+            this.statusValue_Lbl01.AutoSize = true;
+            this.statusValue_Lbl01.Location = new System.Drawing.Point(56, 109);
+            this.statusValue_Lbl01.Name = "statusValue_Lbl01";
+            this.statusValue_Lbl01.Size = new System.Drawing.Size(10, 13);
+            this.statusValue_Lbl01.TabIndex = 11;
+            this.statusValue_Lbl01.Text = "-";
+            // 
+            // status_Lbl01
+            // 
+            this.status_Lbl01.AutoSize = true;
+            this.status_Lbl01.Location = new System.Drawing.Point(9, 109);
+            this.status_Lbl01.Name = "status_Lbl01";
+            this.status_Lbl01.Size = new System.Drawing.Size(40, 13);
+            this.status_Lbl01.TabIndex = 10;
+            this.status_Lbl01.Text = "Status:";
+            // 
+            // linesCountValue_lbl01
+            // 
+            this.linesCountValue_lbl01.AutoSize = true;
+            this.linesCountValue_lbl01.Location = new System.Drawing.Point(58, 86);
+            this.linesCountValue_lbl01.Name = "linesCountValue_lbl01";
+            this.linesCountValue_lbl01.Size = new System.Drawing.Size(10, 13);
+            this.linesCountValue_lbl01.TabIndex = 9;
+            this.linesCountValue_lbl01.Text = "-";
             // 
             // linesCount_lbl01
             // 
@@ -279,69 +342,6 @@
             this.delimiter_lbl.TabIndex = 0;
             this.delimiter_lbl.Text = "Delimiter:";
             // 
-            // linesCount_lbl02
-            // 
-            this.linesCount_lbl02.AutoSize = true;
-            this.linesCount_lbl02.Location = new System.Drawing.Point(12, 98);
-            this.linesCount_lbl02.Name = "linesCount_lbl02";
-            this.linesCount_lbl02.Size = new System.Drawing.Size(35, 13);
-            this.linesCount_lbl02.TabIndex = 9;
-            this.linesCount_lbl02.Text = "Lines:";
-            // 
-            // linesCountValue_lbl01
-            // 
-            this.linesCountValue_lbl01.AutoSize = true;
-            this.linesCountValue_lbl01.Location = new System.Drawing.Point(58, 86);
-            this.linesCountValue_lbl01.Name = "linesCountValue_lbl01";
-            this.linesCountValue_lbl01.Size = new System.Drawing.Size(10, 13);
-            this.linesCountValue_lbl01.TabIndex = 9;
-            this.linesCountValue_lbl01.Text = "-";
-            // 
-            // linesCountValue_lbl02
-            // 
-            this.linesCountValue_lbl02.AutoSize = true;
-            this.linesCountValue_lbl02.Location = new System.Drawing.Point(65, 98);
-            this.linesCountValue_lbl02.Name = "linesCountValue_lbl02";
-            this.linesCountValue_lbl02.Size = new System.Drawing.Size(10, 13);
-            this.linesCountValue_lbl02.TabIndex = 10;
-            this.linesCountValue_lbl02.Text = "-";
-            // 
-            // status_Lbl01
-            // 
-            this.status_Lbl01.AutoSize = true;
-            this.status_Lbl01.Location = new System.Drawing.Point(9, 109);
-            this.status_Lbl01.Name = "status_Lbl01";
-            this.status_Lbl01.Size = new System.Drawing.Size(40, 13);
-            this.status_Lbl01.TabIndex = 10;
-            this.status_Lbl01.Text = "Status:";
-            // 
-            // status_Lbl02
-            // 
-            this.status_Lbl02.AutoSize = true;
-            this.status_Lbl02.Location = new System.Drawing.Point(12, 121);
-            this.status_Lbl02.Name = "status_Lbl02";
-            this.status_Lbl02.Size = new System.Drawing.Size(40, 13);
-            this.status_Lbl02.TabIndex = 11;
-            this.status_Lbl02.Text = "Status:";
-            // 
-            // statusValue_Lbl01
-            // 
-            this.statusValue_Lbl01.AutoSize = true;
-            this.statusValue_Lbl01.Location = new System.Drawing.Point(56, 109);
-            this.statusValue_Lbl01.Name = "statusValue_Lbl01";
-            this.statusValue_Lbl01.Size = new System.Drawing.Size(10, 13);
-            this.statusValue_Lbl01.TabIndex = 11;
-            this.statusValue_Lbl01.Text = "-";
-            // 
-            // statusValue_Lbl02
-            // 
-            this.statusValue_Lbl02.AutoSize = true;
-            this.statusValue_Lbl02.Location = new System.Drawing.Point(65, 121);
-            this.statusValue_Lbl02.Name = "statusValue_Lbl02";
-            this.statusValue_Lbl02.Size = new System.Drawing.Size(10, 13);
-            this.statusValue_Lbl02.TabIndex = 12;
-            this.statusValue_Lbl02.Text = "-";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,7 +370,7 @@
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog01;
-        private System.Windows.Forms.Button sortOpenFile_Btn01;
+        private System.Windows.Forms.Button openFile_Btn01;
         private System.Windows.Forms.Label sortSelectedFile_lbl01;
         private System.Windows.Forms.RadioButton sortRadioButton;
         private System.Windows.Forms.GroupBox typeGroupBox;
@@ -378,7 +378,7 @@
         private System.Windows.Forms.RadioButton lineRadioButton;
         private System.Windows.Forms.Button performCheck_btn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button sortOpenFile_Btn02;
+        private System.Windows.Forms.Button openFile_Btn02;
         private System.Windows.Forms.Label sortSelectedFile_lbl02;
         private System.Windows.Forms.OpenFileDialog openFileDialog02;
         private System.Windows.Forms.GroupBox groupBox2;
