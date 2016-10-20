@@ -81,7 +81,7 @@
             // 
             // openFileDialog01
             // 
-            this.openFileDialog01.FileName = "openFileDialog1";
+            this.openFileDialog01.FileName = "";
             this.openFileDialog01.Filter = "Text files | *.txt";
             this.openFileDialog01.Title = "Select a text file";
             // 
@@ -181,7 +181,7 @@
             // 
             // openFileDialog02
             // 
-            this.openFileDialog02.FileName = "openFileDialog2";
+            this.openFileDialog02.FileName = "";
             this.openFileDialog02.Filter = "Text files | *.txt";
             this.openFileDialog02.Title = "Select a text file";
             // 
@@ -207,7 +207,7 @@
             // statusValue_Lbl02
             // 
             this.statusValue_Lbl02.AutoSize = true;
-            this.statusValue_Lbl02.Location = new System.Drawing.Point(87, 149);
+            this.statusValue_Lbl02.Location = new System.Drawing.Point(88, 145);
             this.statusValue_Lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusValue_Lbl02.Name = "statusValue_Lbl02";
             this.statusValue_Lbl02.Size = new System.Drawing.Size(13, 17);
@@ -217,7 +217,7 @@
             // status_Lbl02
             // 
             this.status_Lbl02.AutoSize = true;
-            this.status_Lbl02.Location = new System.Drawing.Point(16, 149);
+            this.status_Lbl02.Location = new System.Drawing.Point(17, 145);
             this.status_Lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.status_Lbl02.Name = "status_Lbl02";
             this.status_Lbl02.Size = new System.Drawing.Size(52, 17);
@@ -227,7 +227,7 @@
             // linesCountValue_lbl02
             // 
             this.linesCountValue_lbl02.AutoSize = true;
-            this.linesCountValue_lbl02.Location = new System.Drawing.Point(87, 121);
+            this.linesCountValue_lbl02.Location = new System.Drawing.Point(88, 117);
             this.linesCountValue_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCountValue_lbl02.Name = "linesCountValue_lbl02";
             this.linesCountValue_lbl02.Size = new System.Drawing.Size(13, 17);
@@ -237,7 +237,7 @@
             // linesCount_lbl02
             // 
             this.linesCount_lbl02.AutoSize = true;
-            this.linesCount_lbl02.Location = new System.Drawing.Point(16, 121);
+            this.linesCount_lbl02.Location = new System.Drawing.Point(17, 117);
             this.linesCount_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCount_lbl02.Name = "linesCount_lbl02";
             this.linesCount_lbl02.Size = new System.Drawing.Size(46, 17);
@@ -389,7 +389,7 @@
             this.Controls.Add(this.typeGroupBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "File Checker";
             this.typeGroupBox.ResumeLayout(false);
             this.typeGroupBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);

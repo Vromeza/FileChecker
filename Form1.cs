@@ -27,14 +27,16 @@ namespace FileChecker {
             if (openFileDialog01.ShowDialog() == DialogResult.OK) {
                 streamReader01 = new StreamReader(openFileDialog01.FileName);
                 sortSelectedFile_lbl01.Text = openFileDialog01.FileName;
-
                 fileToList(ref streamReader01, ref lines01, ref lineCount01);
-                
                 linesCountValue_lbl01.Text = lineCount01.ToString();
 
                 //@TODO: Move this to perform check
                 if (lineCount01 == 0) {
+                    statusValue_Lbl01.ForeColor = Color.Red;
                     statusValue_Lbl01.Text = "File is empty";
+                } else {
+                    statusValue_Lbl01.ForeColor = Color.Green;
+                    statusValue_Lbl01.Text = "OK";
                 }
             }
         }
@@ -43,12 +45,15 @@ namespace FileChecker {
             if (openFileDialog02.ShowDialog() == DialogResult.OK) {
                 streamReader02 = new StreamReader(openFileDialog02.FileName);
                 sortSelectedFile_lbl02.Text = openFileDialog02.FileName;
-
                 fileToList(ref streamReader02, ref lines02, ref lineCount02);
-
                 linesCountValue_lbl02.Text = lineCount02.ToString();
                 if (lineCount02 == 0) {
+                    statusValue_Lbl02.ForeColor = Color.Red;
                     statusValue_Lbl02.Text = "File is empty";
+                }
+                else {
+                    statusValue_Lbl02.ForeColor = Color.Green;
+                    statusValue_Lbl02.Text = "OK";
                 }
             }
         }
