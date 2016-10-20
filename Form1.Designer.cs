@@ -61,17 +61,19 @@
             // sortSelectedFile_lbl01
             // 
             this.sortSelectedFile_lbl01.AutoSize = true;
-            this.sortSelectedFile_lbl01.Location = new System.Drawing.Point(87, 29);
+            this.sortSelectedFile_lbl01.Location = new System.Drawing.Point(116, 36);
+            this.sortSelectedFile_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sortSelectedFile_lbl01.Name = "sortSelectedFile_lbl01";
-            this.sortSelectedFile_lbl01.Size = new System.Drawing.Size(16, 13);
+            this.sortSelectedFile_lbl01.Size = new System.Drawing.Size(20, 17);
             this.sortSelectedFile_lbl01.TabIndex = 1;
             this.sortSelectedFile_lbl01.Text = "...";
             // 
             // openFile_Btn01
             // 
-            this.openFile_Btn01.Location = new System.Drawing.Point(6, 19);
+            this.openFile_Btn01.Location = new System.Drawing.Point(8, 23);
+            this.openFile_Btn01.Margin = new System.Windows.Forms.Padding(4);
             this.openFile_Btn01.Name = "openFile_Btn01";
-            this.openFile_Btn01.Size = new System.Drawing.Size(75, 23);
+            this.openFile_Btn01.Size = new System.Drawing.Size(100, 28);
             this.openFile_Btn01.TabIndex = 0;
             this.openFile_Btn01.Text = "Open file";
             this.openFile_Btn01.UseVisualStyleBackColor = true;
@@ -86,9 +88,10 @@
             // sortRadioButton
             // 
             this.sortRadioButton.AutoSize = true;
-            this.sortRadioButton.Location = new System.Drawing.Point(12, 19);
+            this.sortRadioButton.Location = new System.Drawing.Point(16, 23);
+            this.sortRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.sortRadioButton.Name = "sortRadioButton";
-            this.sortRadioButton.Size = new System.Drawing.Size(44, 17);
+            this.sortRadioButton.Size = new System.Drawing.Size(55, 21);
             this.sortRadioButton.TabIndex = 2;
             this.sortRadioButton.TabStop = true;
             this.sortRadioButton.Text = "Sort";
@@ -99,9 +102,11 @@
             this.typeGroupBox.Controls.Add(this.radioButton3);
             this.typeGroupBox.Controls.Add(this.lineRadioButton);
             this.typeGroupBox.Controls.Add(this.sortRadioButton);
-            this.typeGroupBox.Location = new System.Drawing.Point(12, 391);
+            this.typeGroupBox.Location = new System.Drawing.Point(16, 481);
+            this.typeGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.typeGroupBox.Name = "typeGroupBox";
-            this.typeGroupBox.Size = new System.Drawing.Size(200, 100);
+            this.typeGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.typeGroupBox.Size = new System.Drawing.Size(267, 123);
             this.typeGroupBox.TabIndex = 3;
             this.typeGroupBox.TabStop = false;
             this.typeGroupBox.Text = "Type of check";
@@ -109,20 +114,24 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(12, 68);
+            this.radioButton3.Enabled = false;
+            this.radioButton3.Location = new System.Drawing.Point(16, 84);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.Size = new System.Drawing.Size(65, 21);
             this.radioButton3.TabIndex = 4;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.Text = "Other";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // lineRadioButton
             // 
             this.lineRadioButton.AutoSize = true;
-            this.lineRadioButton.Location = new System.Drawing.Point(12, 42);
+            this.lineRadioButton.Enabled = false;
+            this.lineRadioButton.Location = new System.Drawing.Point(16, 52);
+            this.lineRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.lineRadioButton.Name = "lineRadioButton";
-            this.lineRadioButton.Size = new System.Drawing.Size(45, 17);
+            this.lineRadioButton.Size = new System.Drawing.Size(56, 21);
             this.lineRadioButton.TabIndex = 3;
             this.lineRadioButton.TabStop = true;
             this.lineRadioButton.Text = "Line";
@@ -130,9 +139,10 @@
             // 
             // performCheck_btn
             // 
-            this.performCheck_btn.Location = new System.Drawing.Point(623, 468);
+            this.performCheck_btn.Location = new System.Drawing.Point(831, 576);
+            this.performCheck_btn.Margin = new System.Windows.Forms.Padding(4);
             this.performCheck_btn.Name = "performCheck_btn";
-            this.performCheck_btn.Size = new System.Drawing.Size(75, 23);
+            this.performCheck_btn.Size = new System.Drawing.Size(100, 28);
             this.performCheck_btn.TabIndex = 4;
             this.performCheck_btn.Text = "Check";
             this.performCheck_btn.UseVisualStyleBackColor = true;
@@ -141,17 +151,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 191);
+            this.label1.Location = new System.Drawing.Point(19, 235);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(103, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "compare with...";
             // 
             // openFile_Btn02
             // 
-            this.openFile_Btn02.Location = new System.Drawing.Point(15, 29);
+            this.openFile_Btn02.Location = new System.Drawing.Point(20, 36);
+            this.openFile_Btn02.Margin = new System.Windows.Forms.Padding(4);
             this.openFile_Btn02.Name = "openFile_Btn02";
-            this.openFile_Btn02.Size = new System.Drawing.Size(75, 23);
+            this.openFile_Btn02.Size = new System.Drawing.Size(100, 28);
             this.openFile_Btn02.TabIndex = 6;
             this.openFile_Btn02.Text = "Open file";
             this.openFile_Btn02.UseVisualStyleBackColor = true;
@@ -160,9 +172,10 @@
             // sortSelectedFile_lbl02
             // 
             this.sortSelectedFile_lbl02.AutoSize = true;
-            this.sortSelectedFile_lbl02.Location = new System.Drawing.Point(96, 39);
+            this.sortSelectedFile_lbl02.Location = new System.Drawing.Point(128, 48);
+            this.sortSelectedFile_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sortSelectedFile_lbl02.Name = "sortSelectedFile_lbl02";
-            this.sortSelectedFile_lbl02.Size = new System.Drawing.Size(16, 13);
+            this.sortSelectedFile_lbl02.Size = new System.Drawing.Size(20, 17);
             this.sortSelectedFile_lbl02.TabIndex = 7;
             this.sortSelectedFile_lbl02.Text = "...";
             // 
@@ -182,9 +195,11 @@
             this.groupBox2.Controls.Add(this.columnCount_lbl02);
             this.groupBox2.Controls.Add(this.openFile_Btn02);
             this.groupBox2.Controls.Add(this.sortSelectedFile_lbl02);
-            this.groupBox2.Location = new System.Drawing.Point(15, 220);
+            this.groupBox2.Location = new System.Drawing.Point(20, 271);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(683, 165);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(911, 203);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File No. 2";
@@ -192,54 +207,60 @@
             // statusValue_Lbl02
             // 
             this.statusValue_Lbl02.AutoSize = true;
-            this.statusValue_Lbl02.Location = new System.Drawing.Point(65, 121);
+            this.statusValue_Lbl02.Location = new System.Drawing.Point(87, 149);
+            this.statusValue_Lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusValue_Lbl02.Name = "statusValue_Lbl02";
-            this.statusValue_Lbl02.Size = new System.Drawing.Size(10, 13);
+            this.statusValue_Lbl02.Size = new System.Drawing.Size(13, 17);
             this.statusValue_Lbl02.TabIndex = 12;
             this.statusValue_Lbl02.Text = "-";
             // 
             // status_Lbl02
             // 
             this.status_Lbl02.AutoSize = true;
-            this.status_Lbl02.Location = new System.Drawing.Point(12, 121);
+            this.status_Lbl02.Location = new System.Drawing.Point(16, 149);
+            this.status_Lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.status_Lbl02.Name = "status_Lbl02";
-            this.status_Lbl02.Size = new System.Drawing.Size(40, 13);
+            this.status_Lbl02.Size = new System.Drawing.Size(52, 17);
             this.status_Lbl02.TabIndex = 11;
             this.status_Lbl02.Text = "Status:";
             // 
             // linesCountValue_lbl02
             // 
             this.linesCountValue_lbl02.AutoSize = true;
-            this.linesCountValue_lbl02.Location = new System.Drawing.Point(65, 98);
+            this.linesCountValue_lbl02.Location = new System.Drawing.Point(87, 121);
+            this.linesCountValue_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCountValue_lbl02.Name = "linesCountValue_lbl02";
-            this.linesCountValue_lbl02.Size = new System.Drawing.Size(10, 13);
+            this.linesCountValue_lbl02.Size = new System.Drawing.Size(13, 17);
             this.linesCountValue_lbl02.TabIndex = 10;
             this.linesCountValue_lbl02.Text = "-";
             // 
             // linesCount_lbl02
             // 
             this.linesCount_lbl02.AutoSize = true;
-            this.linesCount_lbl02.Location = new System.Drawing.Point(12, 98);
+            this.linesCount_lbl02.Location = new System.Drawing.Point(16, 121);
+            this.linesCount_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCount_lbl02.Name = "linesCount_lbl02";
-            this.linesCount_lbl02.Size = new System.Drawing.Size(35, 13);
+            this.linesCount_lbl02.Size = new System.Drawing.Size(46, 17);
             this.linesCount_lbl02.TabIndex = 9;
             this.linesCount_lbl02.Text = "Lines:";
             // 
             // columnCountValue_lbl02
             // 
             this.columnCountValue_lbl02.AutoSize = true;
-            this.columnCountValue_lbl02.Location = new System.Drawing.Point(65, 72);
+            this.columnCountValue_lbl02.Location = new System.Drawing.Point(87, 89);
+            this.columnCountValue_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.columnCountValue_lbl02.Name = "columnCountValue_lbl02";
-            this.columnCountValue_lbl02.Size = new System.Drawing.Size(10, 13);
+            this.columnCountValue_lbl02.Size = new System.Drawing.Size(13, 17);
             this.columnCountValue_lbl02.TabIndex = 4;
             this.columnCountValue_lbl02.Text = "-";
             // 
             // columnCount_lbl02
             // 
             this.columnCount_lbl02.AutoSize = true;
-            this.columnCount_lbl02.Location = new System.Drawing.Point(12, 72);
+            this.columnCount_lbl02.Location = new System.Drawing.Point(16, 89);
+            this.columnCount_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.columnCount_lbl02.Name = "columnCount_lbl02";
-            this.columnCount_lbl02.Size = new System.Drawing.Size(50, 13);
+            this.columnCount_lbl02.Size = new System.Drawing.Size(66, 17);
             this.columnCount_lbl02.TabIndex = 3;
             this.columnCount_lbl02.Text = "Columns:";
             // 
@@ -253,9 +274,11 @@
             this.groupBox1.Controls.Add(this.columnCount_lbl01);
             this.groupBox1.Controls.Add(this.openFile_Btn01);
             this.groupBox1.Controls.Add(this.sortSelectedFile_lbl01);
-            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Location = new System.Drawing.Point(16, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(683, 165);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(911, 203);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File No.1";
@@ -263,54 +286,60 @@
             // statusValue_Lbl01
             // 
             this.statusValue_Lbl01.AutoSize = true;
-            this.statusValue_Lbl01.Location = new System.Drawing.Point(56, 109);
+            this.statusValue_Lbl01.Location = new System.Drawing.Point(75, 134);
+            this.statusValue_Lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusValue_Lbl01.Name = "statusValue_Lbl01";
-            this.statusValue_Lbl01.Size = new System.Drawing.Size(10, 13);
+            this.statusValue_Lbl01.Size = new System.Drawing.Size(13, 17);
             this.statusValue_Lbl01.TabIndex = 11;
             this.statusValue_Lbl01.Text = "-";
             // 
             // status_Lbl01
             // 
             this.status_Lbl01.AutoSize = true;
-            this.status_Lbl01.Location = new System.Drawing.Point(9, 109);
+            this.status_Lbl01.Location = new System.Drawing.Point(12, 134);
+            this.status_Lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.status_Lbl01.Name = "status_Lbl01";
-            this.status_Lbl01.Size = new System.Drawing.Size(40, 13);
+            this.status_Lbl01.Size = new System.Drawing.Size(52, 17);
             this.status_Lbl01.TabIndex = 10;
             this.status_Lbl01.Text = "Status:";
             // 
             // linesCountValue_lbl01
             // 
             this.linesCountValue_lbl01.AutoSize = true;
-            this.linesCountValue_lbl01.Location = new System.Drawing.Point(58, 86);
+            this.linesCountValue_lbl01.Location = new System.Drawing.Point(77, 106);
+            this.linesCountValue_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCountValue_lbl01.Name = "linesCountValue_lbl01";
-            this.linesCountValue_lbl01.Size = new System.Drawing.Size(10, 13);
+            this.linesCountValue_lbl01.Size = new System.Drawing.Size(13, 17);
             this.linesCountValue_lbl01.TabIndex = 9;
             this.linesCountValue_lbl01.Text = "-";
             // 
             // linesCount_lbl01
             // 
             this.linesCount_lbl01.AutoSize = true;
-            this.linesCount_lbl01.Location = new System.Drawing.Point(9, 86);
+            this.linesCount_lbl01.Location = new System.Drawing.Point(12, 106);
+            this.linesCount_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linesCount_lbl01.Name = "linesCount_lbl01";
-            this.linesCount_lbl01.Size = new System.Drawing.Size(35, 13);
+            this.linesCount_lbl01.Size = new System.Drawing.Size(46, 17);
             this.linesCount_lbl01.TabIndex = 8;
             this.linesCount_lbl01.Text = "Lines:";
             // 
             // columnCountValue_lbl01
             // 
             this.columnCountValue_lbl01.AutoSize = true;
-            this.columnCountValue_lbl01.Location = new System.Drawing.Point(58, 63);
+            this.columnCountValue_lbl01.Location = new System.Drawing.Point(77, 78);
+            this.columnCountValue_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.columnCountValue_lbl01.Name = "columnCountValue_lbl01";
-            this.columnCountValue_lbl01.Size = new System.Drawing.Size(10, 13);
+            this.columnCountValue_lbl01.Size = new System.Drawing.Size(13, 17);
             this.columnCountValue_lbl01.TabIndex = 3;
             this.columnCountValue_lbl01.Text = "-";
             // 
             // columnCount_lbl01
             // 
             this.columnCount_lbl01.AutoSize = true;
-            this.columnCount_lbl01.Location = new System.Drawing.Point(9, 63);
+            this.columnCount_lbl01.Location = new System.Drawing.Point(12, 78);
+            this.columnCount_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.columnCount_lbl01.Name = "columnCount_lbl01";
-            this.columnCount_lbl01.Size = new System.Drawing.Size(50, 13);
+            this.columnCount_lbl01.Size = new System.Drawing.Size(66, 17);
             this.columnCount_lbl01.TabIndex = 2;
             this.columnCount_lbl01.Text = "Columns:";
             // 
@@ -318,41 +347,47 @@
             // 
             this.settingsGroupBox.Controls.Add(this.delimiter_txtbox);
             this.settingsGroupBox.Controls.Add(this.delimiter_lbl);
-            this.settingsGroupBox.Location = new System.Drawing.Point(230, 391);
+            this.settingsGroupBox.Location = new System.Drawing.Point(307, 481);
+            this.settingsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.settingsGroupBox.Name = "settingsGroupBox";
-            this.settingsGroupBox.Size = new System.Drawing.Size(387, 100);
+            this.settingsGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.settingsGroupBox.Size = new System.Drawing.Size(516, 123);
             this.settingsGroupBox.TabIndex = 10;
             this.settingsGroupBox.TabStop = false;
             this.settingsGroupBox.Text = "Settings";
             // 
             // delimiter_txtbox
             // 
-            this.delimiter_txtbox.Location = new System.Drawing.Point(54, 16);
-            this.delimiter_txtbox.MaxLength = 1;
+            this.delimiter_txtbox.Enabled = false;
+            this.delimiter_txtbox.Location = new System.Drawing.Point(72, 20);
+            this.delimiter_txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.delimiter_txtbox.MaxLength = 2;
             this.delimiter_txtbox.Name = "delimiter_txtbox";
-            this.delimiter_txtbox.Size = new System.Drawing.Size(29, 20);
+            this.delimiter_txtbox.Size = new System.Drawing.Size(37, 22);
             this.delimiter_txtbox.TabIndex = 1;
             // 
             // delimiter_lbl
             // 
             this.delimiter_lbl.AutoSize = true;
-            this.delimiter_lbl.Location = new System.Drawing.Point(7, 20);
+            this.delimiter_lbl.Location = new System.Drawing.Point(9, 25);
+            this.delimiter_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.delimiter_lbl.Name = "delimiter_lbl";
-            this.delimiter_lbl.Size = new System.Drawing.Size(50, 13);
+            this.delimiter_lbl.Size = new System.Drawing.Size(67, 17);
             this.delimiter_lbl.TabIndex = 0;
             this.delimiter_lbl.Text = "Delimiter:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 503);
+            this.ClientSize = new System.Drawing.Size(947, 619);
             this.Controls.Add(this.settingsGroupBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.performCheck_btn);
             this.Controls.Add(this.typeGroupBox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.typeGroupBox.ResumeLayout(false);

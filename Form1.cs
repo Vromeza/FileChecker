@@ -18,7 +18,6 @@ namespace FileChecker {
         Dictionary<string, int> Dictionary02 = new Dictionary<string, int>();
         List<string> lines01 = new List<string>();
         List<string> lines02 = new List<string>();
-        char Delimiter;
         string checkType;
         public Form1() {
             InitializeComponent();
@@ -56,14 +55,15 @@ namespace FileChecker {
 
         private void performCheck_btn_Click(object sender, EventArgs e) {
             //@TODO: Check if there is an option selected here
-            if (delimiter_txtbox.Text == "") {
-                MessageBox.Show("Please select a delimiter");
-                return;
-            }
+            //if (delimiter_txtbox.Text == "") {
+            //    MessageBox.Show("Please select a delimiter");
+            //    return;
+            //}
             if (lines01.Count <= 0 && lines01.Count <= 0) {
                 MessageBox.Show("Please select file.");
                 return;
             }
+
             if (performCheck()) {
                 MessageBox.Show("Files are equal");
                 //@TODO: Display relevant data
@@ -75,7 +75,6 @@ namespace FileChecker {
 
 
         private bool performCheck() {
-            Delimiter = delimiter_txtbox.Text[0];
             checkType = typeGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             switch (checkType) {
                 case "Line":
