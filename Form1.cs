@@ -19,6 +19,7 @@ namespace FileChecker {
         List<string> lines01 = new List<string>();
         List<string> lines02 = new List<string>();
         string checkType;
+
         public Form1() {
             InitializeComponent();
         }
@@ -88,6 +89,14 @@ namespace FileChecker {
                 case "Sort":
                     listToDictionary(ref Dictionary01, ref lines01);
                     listToDictionary(ref Dictionary02, ref lines02);
+
+                    var dicOne = (Dictionary01 ?? new Dictionary<string, int>())
+                        .OrderBy(kvp => kvp.Key);
+                    var dicTwo = (Dictionary02 ?? new Dictionary<string, int>())
+                        .OrderBy(kvp => kvp.Key);
+                    var diffOne = dicOne.Except(dicTwo);
+                    var diffTwo = dicTwo.Except(dicOne);
+
                     return DictionaryExtensionMethods.ContentEquals(Dictionary01, Dictionary02);
                 default:MessageBox.Show("Please select a check type");
                     return false;

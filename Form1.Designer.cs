@@ -52,10 +52,14 @@
             this.settingsGroupBox = new System.Windows.Forms.GroupBox();
             this.delimiter_txtbox = new System.Windows.Forms.TextBox();
             this.delimiter_lbl = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.settingsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // sortSelectedFile_lbl01
@@ -81,7 +85,6 @@
             // 
             // openFileDialog01
             // 
-            this.openFileDialog01.FileName = "";
             this.openFileDialog01.Filter = "Text files | *.txt";
             this.openFileDialog01.Title = "Select a text file";
             // 
@@ -181,7 +184,6 @@
             // 
             // openFileDialog02
             // 
-            this.openFileDialog02.FileName = "";
             this.openFileDialog02.Filter = "Text files | *.txt";
             this.openFileDialog02.Title = "Select a text file";
             // 
@@ -266,6 +268,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.statusValue_Lbl01);
             this.groupBox1.Controls.Add(this.status_Lbl01);
             this.groupBox1.Controls.Add(this.linesCountValue_lbl01);
@@ -376,6 +379,28 @@
             this.delimiter_lbl.TabIndex = 0;
             this.delimiter_lbl.Text = "Delimiter:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Key,
+            this.Value});
+            this.dataGridView1.Location = new System.Drawing.Point(406, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(480, 150);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // Key
+            // 
+            this.Key.HeaderText = "Line";
+            this.Key.Name = "Key";
+            // 
+            // Value
+            // 
+            this.Value.HeaderText = "No. of appearances";
+            this.Value.Name = "Value";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,6 +423,7 @@
             this.groupBox1.PerformLayout();
             this.settingsGroupBox.ResumeLayout(false);
             this.settingsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,6 +459,9 @@
         private System.Windows.Forms.Label statusValue_Lbl01;
         private System.Windows.Forms.Label status_Lbl01;
         private System.Windows.Forms.Label statusValue_Lbl02;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Key;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
     }
 }
 
