@@ -19,9 +19,25 @@ namespace FileChecker {
         List<string> lines01 = new List<string>();
         List<string> lines02 = new List<string>();
         string checkType;
+        DataTable dataTable01 = new DataTable();
+        DataTable dataTable02 = new DataTable();
+        BindingSource bindingSource01 = new BindingSource();
+        BindingSource bindingSource02 = new BindingSource();
 
         public Form1() {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+            dataGridView1.DataSource = bindingSource01;
+            dataGridView2.DataSource = bindingSource02;
+
+            DataColumn keyColumn = new DataColumn("Data");
+            DataColumn valueColumn = new DataColumn("No. of appearances");
+            dataTable01.Columns.Add(keyColumn);
+            dataTable01.Columns.Add(valueColumn);
+
+            dataTable02 = dataTable01.Clone();
         }
 
         private void openFile_Btn_Click(object sender, EventArgs e) {
@@ -75,7 +91,7 @@ namespace FileChecker {
                 //@TODO: Display relevant data
             }else {
                 MessageBox.Show("Files are not equal");
-                //@TODO: Display relevant data
+                buildDataTables();
             }
         }
 
@@ -89,14 +105,6 @@ namespace FileChecker {
                 case "Sort":
                     listToDictionary(ref Dictionary01, ref lines01);
                     listToDictionary(ref Dictionary02, ref lines02);
-
-                    var dicOne = (Dictionary01 ?? new Dictionary<string, int>())
-                        .OrderBy(kvp => kvp.Key);
-                    var dicTwo = (Dictionary02 ?? new Dictionary<string, int>())
-                        .OrderBy(kvp => kvp.Key);
-                    var diffOne = dicOne.Except(dicTwo);
-                    var diffTwo = dicTwo.Except(dicOne);
-
                     return DictionaryExtensionMethods.ContentEquals(Dictionary01, Dictionary02);
                 default:MessageBox.Show("Please select a check type");
                     return false;
@@ -130,6 +138,42 @@ namespace FileChecker {
 
         private int getNumberOfColumns(string line, char delimiter) {
             return line.Split(delimiter).Length;
+        }
+
+        private void buildDataTables() {
+            dataTable01.Clear();
+            dataTable02.Clear();
+
+            var dicOne = (Dictionary01 ?? new Dictionary<string, int>())
+    .OrderBy(kvp => kvp.Key);
+            var dicTwo = (Dictionary02 ?? new Dictionary<string, int>())
+                .OrderBy(kvp => kvp.Key);
+            var diffOne = dicOne.Except(dicTwo);
+            var diffTwo = dicTwo.Except(dicOne);
+
+            foreach (KeyValuePair<string, int> diff in diffOne) {
+                DataRow row = dataTable01.NewRow();
+                row[0] = diff.Key.ToString();
+                row[1] = diff.Value.ToString();
+                dataTable01.Rows.Add(row);
+                Console.WriteLine(diff.ToString());
+            }
+            foreach (KeyValuePair<string, int> diff in diffTwo) {
+                DataRow row = dataTable02.NewRow();
+                row[0] = diff.Key.ToString();
+                row[1] = diff.Value.ToString();
+                dataTable02.Rows.Add(row);
+                Console.WriteLine(diff.ToString());
+            }
+
+            bindingSource01.DataSource = dataTable01;
+            bindingSource02.DataSource = dataTable02;
+
+            dataGridView1.AutoResizeColumns(
+                DataGridViewAutoSizeColumnsMode.AllCells);
+            dataGridView2.AutoResizeColumns(
+                DataGridViewAutoSizeColumnsMode.AllCells);
+            //@TODO: Display relevant data
         }
     }
 }

@@ -43,6 +43,7 @@
             this.columnCountValue_lbl02 = new System.Windows.Forms.Label();
             this.columnCount_lbl02 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusValue_Lbl01 = new System.Windows.Forms.Label();
             this.status_Lbl01 = new System.Windows.Forms.Label();
             this.linesCountValue_lbl01 = new System.Windows.Forms.Label();
@@ -52,23 +53,23 @@
             this.settingsGroupBox = new System.Windows.Forms.GroupBox();
             this.delimiter_txtbox = new System.Windows.Forms.TextBox();
             this.delimiter_lbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.typeGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.settingsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.settingsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // sortSelectedFile_lbl01
             // 
-            this.sortSelectedFile_lbl01.AutoSize = true;
             this.sortSelectedFile_lbl01.Location = new System.Drawing.Point(116, 36);
             this.sortSelectedFile_lbl01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sortSelectedFile_lbl01.Name = "sortSelectedFile_lbl01";
-            this.sortSelectedFile_lbl01.Size = new System.Drawing.Size(20, 17);
+            this.sortSelectedFile_lbl01.Size = new System.Drawing.Size(283, 40);
             this.sortSelectedFile_lbl01.TabIndex = 1;
             this.sortSelectedFile_lbl01.Text = "...";
             // 
@@ -174,11 +175,10 @@
             // 
             // sortSelectedFile_lbl02
             // 
-            this.sortSelectedFile_lbl02.AutoSize = true;
             this.sortSelectedFile_lbl02.Location = new System.Drawing.Point(128, 48);
             this.sortSelectedFile_lbl02.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sortSelectedFile_lbl02.Name = "sortSelectedFile_lbl02";
-            this.sortSelectedFile_lbl02.Size = new System.Drawing.Size(20, 17);
+            this.sortSelectedFile_lbl02.Size = new System.Drawing.Size(267, 37);
             this.sortSelectedFile_lbl02.TabIndex = 7;
             this.sortSelectedFile_lbl02.Text = "...";
             // 
@@ -189,6 +189,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Controls.Add(this.statusValue_Lbl02);
             this.groupBox2.Controls.Add(this.status_Lbl02);
             this.groupBox2.Controls.Add(this.linesCountValue_lbl02);
@@ -268,6 +270,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.statusValue_Lbl01);
             this.groupBox1.Controls.Add(this.status_Lbl01);
@@ -285,6 +288,18 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File No.1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(406, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(480, 150);
+            this.dataGridView1.TabIndex = 12;
             // 
             // statusValue_Lbl01
             // 
@@ -379,27 +394,35 @@
             this.delimiter_lbl.TabIndex = 0;
             this.delimiter_lbl.Text = "Delimiter:";
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Key,
-            this.Value});
-            this.dataGridView1.Location = new System.Drawing.Point(406, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 150);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(402, 22);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(480, 150);
+            this.dataGridView2.TabIndex = 13;
             // 
-            // Key
+            // label2
             // 
-            this.Key.HeaderText = "Line";
-            this.Key.Name = "Key";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(406, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(418, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Lines contained here are missing or different from the other table";
             // 
-            // Value
+            // label3
             // 
-            this.Value.HeaderText = "No. of appearances";
-            this.Value.Name = "Value";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(402, 175);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(418, 17);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Lines contained here are missing or different from the other table";
             // 
             // Form1
             // 
@@ -412,18 +435,21 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.performCheck_btn);
             this.Controls.Add(this.typeGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "File Checker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.typeGroupBox.ResumeLayout(false);
             this.typeGroupBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.settingsGroupBox.ResumeLayout(false);
             this.settingsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,8 +486,9 @@
         private System.Windows.Forms.Label status_Lbl01;
         private System.Windows.Forms.Label statusValue_Lbl02;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Key;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
