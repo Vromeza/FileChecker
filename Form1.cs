@@ -16,6 +16,8 @@ namespace FileChecker {
         int lineCount01, lineCount02;
         Dictionary<string, int> Dictionary01 = new Dictionary<string, int>();
         Dictionary<string, int> Dictionary02 = new Dictionary<string, int>();
+        Dictionary<string, List<string>> sections01 = new Dictionary<string, List<string>>();
+        Dictionary<string, List<string>> sections02 = new Dictionary<string, List<string>>();
         List<string> lines01 = new List<string>();
         List<string> lines02 = new List<string>();
         string checkType;
@@ -76,11 +78,6 @@ namespace FileChecker {
         }
 
         private void performCheck_btn_Click(object sender, EventArgs e) {
-            //@TODO: Check if there is an option selected here
-            //if (delimiter_txtbox.Text == "") {
-            //    MessageBox.Show("Please select a delimiter");
-            //    return;
-            //}
             if (lines01.Count <= 0 && lines01.Count <= 0) {
                 MessageBox.Show("Please select file.");
                 return;
@@ -88,7 +85,6 @@ namespace FileChecker {
 
             if (performCheck()) {
                 MessageBox.Show("Files are equal");
-                //@TODO: Display relevant data
             }else {
                 MessageBox.Show("Files are not equal");
                 buildDataTables();
@@ -99,9 +95,14 @@ namespace FileChecker {
         private bool performCheck() {
             checkType = typeGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             switch (checkType) {
-                case "Line":
-                    //@TODO: Implement line checking
-                    return false;
+                case "Sections":
+                    listToSectionsDictionary(ref sections01, ref lines01);
+                    listToSectionsDictionary(ref sections02, ref lines02);
+                    var sortedList01 = sections01.OrderBy(kvp => kvp.Key);
+                    //sortedList01.Sort();
+                    var sortedList02 = sections01.OrderBy(kvp => kvp.Key);
+                    //sortedList02.Sort();
+                    return DictionaryExtensionMethods.ContentEquals(sections01, sections02);
                 case "Sort":
                     listToDictionary(ref Dictionary01, ref lines01);
                     listToDictionary(ref Dictionary02, ref lines02);
@@ -119,6 +120,21 @@ namespace FileChecker {
                 }
                 else {
                     dictionary[line] = 1;
+                }
+            }
+        }
+
+        private void listToSectionsDictionary(ref Dictionary<string, List<string>> sections, ref List<string> list) {
+            sections.Clear();
+            List<string> section = null;
+            foreach (string line in list) {
+                if (checkForSection(line)) {
+                    section = null;
+                    section = new List<string>();
+                    sections.Add(line, section);
+                }
+                else {
+                    section.Add(line);
                 }
             }
         }
@@ -173,7 +189,14 @@ namespace FileChecker {
                 DataGridViewAutoSizeColumnsMode.AllCells);
             dataGridView2.AutoResizeColumns(
                 DataGridViewAutoSizeColumnsMode.AllCells);
-            //@TODO: Display relevant data
         }
+
+        private bool checkForSection(string line) {
+            if (line[0] == '[' && line[line.Length - 1] == ']') {
+                return true;
+            }else { return false; }
+        }
+
+
     }
 }
