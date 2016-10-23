@@ -99,10 +99,10 @@ namespace FileChecker {
                     listToSectionsDictionary(ref sections01, ref lines01);
                     listToSectionsDictionary(ref sections02, ref lines02);
                     var sortedList01 = sections01.OrderBy(kvp => kvp.Key);
-                    //sortedList01.Sort();
-                    var sortedList02 = sections01.OrderBy(kvp => kvp.Key);
-                    //sortedList02.Sort();
-                    return DictionaryExtensionMethods.ContentEquals(sections01, sections02);
+                    var sortedList02 = sections02.OrderBy(kvp => kvp.Key);
+
+                    return true;
+
                 case "Sort":
                     listToDictionary(ref Dictionary01, ref lines01);
                     listToDictionary(ref Dictionary02, ref lines02);
@@ -134,7 +134,13 @@ namespace FileChecker {
                     sections.Add(line, section);
                 }
                 else {
-                    section.Add(line);
+                    try {
+                        section.Add(line);
+                    }
+                    catch (Exception e) {
+                        MessageBox.Show("Section not found");
+                        return;
+                    }
                 }
             }
         }
